@@ -27,10 +27,19 @@
 <meta property="og:site_name" content="Hexo">
 <meta property="og:description" content="引入概念:GSI是什么鬼？GSI 的全称是 Generic System Image，翻译过来就是「通用系统镜像」，这个概念来源于 Project Treble。自从 Android 8 引入 Project Treble 后，手机的系统文件和底层的厂商硬件驱动开始分离存放，更新系统时只需要更新系统文件即可。此项举措意在方便厂商加快 Android 大版本更新的步伐，自然也同样方便了第三方 ROM">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://upload.cc/i1/2020/09/18/h4X18d.jpg">
+<meta property="og:image" content="https://upload.cc/i1/2020/09/18/bxRatU.jpg">
+<meta property="og:image" content="https://upload.cc/i1/2020/09/18/Qg0Grn.png">
+<meta property="og:image" content="https://upload.cc/i1/2020/09/18/F3iMwP.png">
+<meta property="og:image" content="https://upload.cc/i1/2020/09/18/WEe2Bz.png">
+<meta property="og:image" content="https://upload.cc/i1/2020/09/18/ZvUPab.png">
+<meta property="og:image" content="https://upload.cc/i1/2020/09/18/C6v97n.png">
+<meta property="og:image" content="https://upload.cc/i1/2020/09/18/q6mGWa.png">
 <meta property="article:published_time" content="2020-09-18T11:50:15.000Z">
-<meta property="article:modified_time" content="2020-09-18T12:47:15.742Z">
+<meta property="article:modified_time" content="2020-09-18T13:09:40.596Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://upload.cc/i1/2020/09/18/h4X18d.jpg">
 
 <link rel="canonical" href="http://example.com/2020/09/18/wwrrj-gsi%E6%95%99%E7%A8%8B-bug%E4%BF%AE%E5%A4%8D%E6%95%99%E7%A8%8B/">
 
@@ -174,7 +183,7 @@
               <span class="post-meta-item-text">Posted on</span>
               
 
-              <time title="Created: 2020-09-18 19:50:15 / Modified: 20:47:15" itemprop="dateCreated datePublished" datetime="2020-09-18T19:50:15+08:00">2020-09-18</time>
+              <time title="Created: 2020-09-18 19:50:15 / Modified: 21:09:40" itemprop="dateCreated datePublished" datetime="2020-09-18T19:50:15+08:00">2020-09-18</time>
             </span>
 
           
@@ -190,21 +199,21 @@
       
         <p><strong>引入概念:GSI是什么鬼？</strong><br>GSI 的全称是 Generic System Image，翻译过来就是「通用系统镜像」，这个概念来源于 Project Treble。自从 Android 8 引入 Project Treble 后，手机的系统文件和底层的厂商硬件驱动开始分离存放，更新系统时只需要更新系统文件即可。此项举措意在方便厂商加快 Android 大版本更新的步伐，自然也同样方便了第三方 ROM 的开发和更新，成为了社区开发的一大福音。从理论上来说，刷入某个 GSI，你的手机就会摇身一变，从一个系统切换到了另一个系统。<br>更加大白话一点，理论上只要你的手机支持Project Treble，你就可以让你的手机刷入各种系统。当然，想法很美好，现实很残酷，事实上gsi并没有那么美好，局限性很多，但是的确为我们提供了很多便利，成为了一种当下流行的移植方案。<br>这里需要注意的是，sgsi并不在我们的讨论范围内，这是两种不同的移植方案，想看sgsi的具体可以看酷安迷路的小新大大的Github项目：<a target="_blank" rel="noopener" href="https://github.com/xiaoxindada/SGSI-Project">https://github.com/xiaoxindada/SGSI-Project</a></p>
 <p>概念大致了解了，我们怎么确定自己手机支不支持Project Treble呢？</p>
-<p><strong>如何检查自己的设备是否支持Project Treble?</strong><br>很简单，通过Treble Check 检查<br>这个软件可在酷安及搜索引擎内搜索到，这里就不放链接了。<br>[img]<a target="_blank" rel="noopener" href="https://upload.cc/i1/2020/09/18/lDe860.png[/img]">https://upload.cc/i1/2020/09/18/lDe860.png[/img]</a><br>如图第一框，显示支持即您的设备可刷入GSI<br>目前主流的有两种三大类A only (sar),AB<br>我们下载到的gsi有两种A only AB,<br>这里需要注意，虽然SAR属于A only但是需要刷入AB的GSI<br>(仅仅是最基本的判断方法，误判严重)<br><strong>刷入方法</strong><br>刷入方法这里大概讲一下<br>以我的手机魅族16sPro为例（使用TWRP演示，Orangeox，SHRP等REC则不需要切换刷入类型）<br>[img]<a target="_blank" rel="noopener" href="https://upload.cc/i1/2020/09/18/h4X18d.jpg[/img]">https://upload.cc/i1/2020/09/18/h4X18d.jpg[/img]</a><br>[img]<a target="_blank" rel="noopener" href="https://upload.cc/i1/2020/09/18/bxRatU.jpg[/img]">https://upload.cc/i1/2020/09/18/bxRatU.jpg[/img]</a><br>[img]<a target="_blank" rel="noopener" href="https://upload.cc/i1/2020/09/18/Qg0Grn.png[/img]">https://upload.cc/i1/2020/09/18/Qg0Grn.png[/img]</a><br>如果变成了安装zip包，你就可以选择img格式的GSI刷入啦</p>
+<p><strong>如何检查自己的设备是否支持Project Treble?</strong><br>很简单，通过Treble Check 检查<br>这个软件可在酷安及搜索引擎内搜索到，这里就不放链接了。<br>[img]<a target="_blank" rel="noopener" href="https://upload.cc/i1/2020/09/18/lDe860.png[/img]">https://upload.cc/i1/2020/09/18/lDe860.png[/img]</a><br>如图第一框，显示支持即您的设备可刷入GSI<br>目前主流的有两种三大类A only (sar),AB<br>我们下载到的gsi有两种A only AB,<br>这里需要注意，虽然SAR属于A only但是需要刷入AB的GSI<br>(仅仅是最基本的判断方法，误判严重)<br><strong>刷入方法</strong><br>刷入方法这里大概讲一下<br>以我的手机魅族16sPro为例（使用TWRP演示，Orangeox，SHRP等REC则不需要切换刷入类型）<br><img src="https://upload.cc/i1/2020/09/18/h4X18d.jpg" alt="avatar"><br><img src="https://upload.cc/i1/2020/09/18/bxRatU.jpg" alt="avatar"><br><img src="https://upload.cc/i1/2020/09/18/Qg0Grn.png" alt="avatar"><br>如果变成了安装zip包，你就可以选择img格式的GSI刷入啦</p>
 <p>下面进入正题</p>
 <p><strong>获取GSI的方法？</strong></p>
 <p>1.）网上有大把的GSI镜像下载地址，你可以直接空手套GSI，直接下载<br>  这里放一些下载地址：<br>①<a target="_blank" rel="noopener" href="https://sourceforge.net/projects/oemgsis/files/">https://sourceforge.net/projects/oemgsis/files/</a><br>②<a target="_blank" rel="noopener" href="https://github.com/phhusson/treble_experimentations/wiki/Generic-System-Image-%28GSI%29-list">https://github.com/phhusson/treble_experimentations/wiki/Generic-System-Image-%28GSI%29-list</a><br>③<a target="_blank" rel="noopener" href="https://mirrors.lolinet.com/firmware/gsi/">https://mirrors.lolinet.com/firmware/gsi/</a></p>
-<p>2.）自己制作gsi<br>使用大名鼎鼎的Erfan tool<br>问:如何使用呢？<br>答:<br>①确保你有linux系统，推荐使用Ubuntu，小白推荐使用Deepin系统，下面的演示都是在deepin上，但是不影响我们的教程。<br>为什么选择Deepin呢？（对小白及刚入门玩家友好，新手强烈建议）<br>②确保您有计算机基础，最好有使用linux的基础，Linux是一个命令行系统，我们大部分的操作都是在命令行中操作。<br>Erfan工具下载地址:<a target="_blank" rel="noopener" href="https://cloud.189.cn/t/VFrIZrUNvMby">https://cloud.189.cn/t/VFrIZrUNvMby</a><br>接下来是教程，因为命令较多，我会以图文的方式为大家展现一遍<br>首先我们需要把工具下好，建议解压到linux系统桌面上，方便使用<br>[img]<a target="_blank" rel="noopener" href="https://upload.cc/i1/2020/09/18/F3iMwP.png[/img]">https://upload.cc/i1/2020/09/18/F3iMwP.png[/img]</a><br>[img]<a target="_blank" rel="noopener" href="https://upload.cc/i1/2020/09/18/WEe2Bz.png[/img]">https://upload.cc/i1/2020/09/18/WEe2Bz.png[/img]</a><br>如图，我们解压后进入文件夹<br>我们先打开终端<br>设置root密码<br>终端输入<br>sudo passwd<br>跟着提示来</p>
-<p>给su权限<br>[img]<a target="_blank" rel="noopener" href="https://upload.cc/i1/2020/09/18/ZvUPab.png[/img]">https://upload.cc/i1/2020/09/18/ZvUPab.png[/img]</a><br>第一次使用该工具请输入./setup.sh<br>[img]<a target="_blank" rel="noopener" href="https://upload.cc/i1/2020/09/18/C6v97n.png[/img]">https://upload.cc/i1/2020/09/18/C6v97n.png[/img]</a><br>该步骤为安装依赖文件<br>[img]<a target="_blank" rel="noopener" href="https://upload.cc/i1/2020/09/18/q6mGWa.png[/img]">https://upload.cc/i1/2020/09/18/q6mGWa.png[/img]</a><br>静静等待安装完成</p>
+<p>2.）自己制作gsi<br>使用大名鼎鼎的Erfan tool<br>问:如何使用呢？<br>答:<br>①确保你有linux系统，推荐使用Ubuntu，小白推荐使用Deepin系统，下面的演示都是在deepin上，但是不影响我们的教程。<br>为什么选择Deepin呢？（对小白及刚入门玩家友好，新手强烈建议）<br>②确保您有计算机基础，最好有使用linux的基础，Linux是一个命令行系统，我们大部分的操作都是在命令行中操作。<br>Erfan工具下载地址:<a target="_blank" rel="noopener" href="https://cloud.189.cn/t/VFrIZrUNvMby">https://cloud.189.cn/t/VFrIZrUNvMby</a><br>接下来是教程，因为命令较多，我会以图文的方式为大家展现一遍<br>首先我们需要把工具下好，建议解压到linux系统桌面上，方便使用<br><img src="https://upload.cc/i1/2020/09/18/F3iMwP.png" alt="avatar"><br><img src="https://upload.cc/i1/2020/09/18/WEe2Bz.png" alt="avatar"><br>如图，我们解压后进入文件夹<br>我们先打开终端<br>设置root密码<br>终端输入<br>sudo passwd<br>跟着提示来</p>
+<p>给su权限<br><img src="https://upload.cc/i1/2020/09/18/ZvUPab.png" alt="avatar"><br>第一次使用该工具请输入./setup.sh<br><img src="https://upload.cc/i1/2020/09/18/C6v97n.png" alt="avatar"><br>该步骤为安装依赖文件<br><img src="https://upload.cc/i1/2020/09/18/q6mGWa.png" alt="avatar"><br>静静等待安装完成</p>
 <p>准备工作结束<br>接下来我会教你们如何跑GSI<br>首先我们要知道这个工具支持哪些系统</p>
 <h3 id="9-Pie："><a href="#9-Pie：" class="headerlink" title="9 Pie："></a>9 Pie：</h3><blockquote>
-<p>ColorOS<br>Flyme<br>Generic<br>MIUI<br>Moto<br>Nubia<br>OneUI<br>OxygenOS<br>Pixel<br>Xperia<br>ZUI<br>ZenUI</p>
+<p>ColorOS Flyme Generic MIUI Moto Nubia OneUI    OxygenOS Pixel    Xperia    ZUI ZenUI</p>
 </blockquote>
 <h3 id="10-Q："><a href="#10-Q：" class="headerlink" title="10 Q："></a>10 Q：</h3><blockquote>
-<p>Generic<br>MIUI<br>OxygenOS<br>Pixel<br>Flyme</p>
+<p>Generic MIUI    OxygenOS Pixel Flyme</p>
 </blockquote>
 <h3 id="11-R："><a href="#11-R：" class="headerlink" title="11 R："></a>11 R：</h3><blockquote>
-<p>Generic<br>Pixel<br>Generic<br>Pixel</p>
+<p>Generic Pixel Generic Pixel</p>
 </blockquote>
 <p><strong>如何使用呢？</strong><br>在ErfanGSIs-master文件夹内打开终端<br>这里给一个公式<br>在终端内输入./url2GSI.sh {文件目录或直链} {系统类型}<br>比如我要跑一个MIUI的gsi,包的名字叫MIUI.zip<br>就输入./url2GSI.sh MIUI.zip MIUI<br>然后回车</p>
 
@@ -220,13 +229,6 @@
 
 
         
-    <div class="post-nav">
-      <div class="post-nav-item">
-    <a href="/2020/09/18/hello-world/" rel="prev" title="Hello World">
-      <i class="fa fa-chevron-left"></i> Hello World
-    </a></div>
-      <div class="post-nav-item"></div>
-    </div>
       </footer>
     
   </article>
@@ -298,7 +300,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">2</span>
+          <span class="site-state-item-count">1</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
