@@ -20,28 +20,32 @@
     var CONFIG = {"hostname":"example.com","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://example.com/index.html">
+  <meta name="description" content="引入概念:GSI是什么鬼？GSI 的全称是 Generic System Image，翻译过来就是「通用系统镜像」，这个概念来源于 Project Treble。自从 Android 8 引入 Project Treble 后，手机的系统文件和底层的厂商硬件驱动开始分离存放，更新系统时只需要更新系统文件即可。此项举措意在方便厂商加快 Android 大版本更新的步伐，自然也同样方便了第三方 ROM">
+<meta property="og:type" content="article">
+<meta property="og:title" content="wwrrj gsi教程&amp;bug修复教程">
+<meta property="og:url" content="http://example.com/2020/09/18/wwrrj-gsi%E6%95%99%E7%A8%8B-bug%E4%BF%AE%E5%A4%8D%E6%95%99%E7%A8%8B/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="引入概念:GSI是什么鬼？GSI 的全称是 Generic System Image，翻译过来就是「通用系统镜像」，这个概念来源于 Project Treble。自从 Android 8 引入 Project Treble 后，手机的系统文件和底层的厂商硬件驱动开始分离存放，更新系统时只需要更新系统文件即可。此项举措意在方便厂商加快 Android 大版本更新的步伐，自然也同样方便了第三方 ROM">
 <meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2020-09-18T11:50:15.000Z">
+<meta property="article:modified_time" content="2020-09-18T12:47:15.742Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="http://example.com/">
+<link rel="canonical" href="http://example.com/2020/09/18/wwrrj-gsi%E6%95%99%E7%A8%8B-bug%E4%BF%AE%E5%A4%8D%E6%95%99%E7%A8%8B/">
 
 
 <script id="page-configurations">
   // https://hexo.io/docs/variables.html
   CONFIG.page = {
     sidebar: "",
-    isHome : true,
-    isPost : false,
+    isHome : false,
+    isPost : true,
     lang   : 'en'
   };
 </script>
 
-  <title>Hexo</title>
+  <title>wwrrj gsi教程&bug修复教程 | Hexo</title>
   
 
 
@@ -139,9 +143,10 @@
         <div class="content-wrap">
           
 
-          <div class="content index posts-expand">
+          <div class="content post posts-expand">
             
-      
+
+    
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
@@ -157,10 +162,9 @@
       <meta itemprop="name" content="Hexo">
     </span>
       <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/09/18/wwrrj-gsi%E6%95%99%E7%A8%8B-bug%E4%BF%AE%E5%A4%8D%E6%95%99%E7%A8%8B/" class="post-title-link" itemprop="url">wwrrj gsi教程&bug修复教程</a>
-        </h2>
+        <h1 class="post-title" itemprop="name headline">
+          wwrrj gsi教程&bug修复教程
+        </h1>
 
         <div class="post-meta">
             <span class="post-meta-item">
@@ -184,7 +188,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <p><strong>引入概念:GSI是什么鬼？</strong><br>GSI 的全称是 Generic System Image，翻译过来就是「通用系统镜像」，这个概念来源于 Project Treble。自从 Android 8 引入 Project Treble 后，手机的系统文件和底层的厂商硬件驱动开始分离存放，更新系统时只需要更新系统文件即可。此项举措意在方便厂商加快 Android 大版本更新的步伐，自然也同样方便了第三方 ROM 的开发和更新，成为了社区开发的一大福音。从理论上来说，刷入某个 GSI，你的手机就会摇身一变，从一个系统切换到了另一个系统。<br>更加大白话一点，理论上只要你的手机支持Project Treble，你就可以让你的手机刷入各种系统。当然，想法很美好，现实很残酷，事实上gsi并没有那么美好，局限性很多，但是的确为我们提供了很多便利，成为了一种当下流行的移植方案。<br>这里需要注意的是，sgsi并不在我们的讨论范围内，这是两种不同的移植方案，想看sgsi的具体可以看酷安迷路的小新大大的Github项目：<a target="_blank" rel="noopener" href="https://github.com/xiaoxindada/SGSI-Project">https://github.com/xiaoxindada/SGSI-Project</a></p>
+        <p><strong>引入概念:GSI是什么鬼？</strong><br>GSI 的全称是 Generic System Image，翻译过来就是「通用系统镜像」，这个概念来源于 Project Treble。自从 Android 8 引入 Project Treble 后，手机的系统文件和底层的厂商硬件驱动开始分离存放，更新系统时只需要更新系统文件即可。此项举措意在方便厂商加快 Android 大版本更新的步伐，自然也同样方便了第三方 ROM 的开发和更新，成为了社区开发的一大福音。从理论上来说，刷入某个 GSI，你的手机就会摇身一变，从一个系统切换到了另一个系统。<br>更加大白话一点，理论上只要你的手机支持Project Treble，你就可以让你的手机刷入各种系统。当然，想法很美好，现实很残酷，事实上gsi并没有那么美好，局限性很多，但是的确为我们提供了很多便利，成为了一种当下流行的移植方案。<br>这里需要注意的是，sgsi并不在我们的讨论范围内，这是两种不同的移植方案，想看sgsi的具体可以看酷安迷路的小新大大的Github项目：<a target="_blank" rel="noopener" href="https://github.com/xiaoxindada/SGSI-Project">https://github.com/xiaoxindada/SGSI-Project</a></p>
 <p>概念大致了解了，我们怎么确定自己手机支不支持Project Treble呢？</p>
 <p><strong>如何检查自己的设备是否支持Project Treble?</strong><br>很简单，通过Treble Check 检查<br>这个软件可在酷安及搜索引擎内搜索到，这里就不放链接了。<br>[img]<a target="_blank" rel="noopener" href="https://upload.cc/i1/2020/09/18/lDe860.png[/img]">https://upload.cc/i1/2020/09/18/lDe860.png[/img]</a><br>如图第一框，显示支持即您的设备可刷入GSI<br>目前主流的有两种三大类A only (sar),AB<br>我们下载到的gsi有两种A only AB,<br>这里需要注意，虽然SAR属于A only但是需要刷入AB的GSI<br>(仅仅是最基本的判断方法，误判严重)<br><strong>刷入方法</strong><br>刷入方法这里大概讲一下<br>以我的手机魅族16sPro为例（使用TWRP演示，Orangeox，SHRP等REC则不需要切换刷入类型）<br>[img]<a target="_blank" rel="noopener" href="https://upload.cc/i1/2020/09/18/h4X18d.jpg[/img]">https://upload.cc/i1/2020/09/18/h4X18d.jpg[/img]</a><br>[img]<a target="_blank" rel="noopener" href="https://upload.cc/i1/2020/09/18/bxRatU.jpg[/img]">https://upload.cc/i1/2020/09/18/bxRatU.jpg[/img]</a><br>[img]<a target="_blank" rel="noopener" href="https://upload.cc/i1/2020/09/18/Qg0Grn.png[/img]">https://upload.cc/i1/2020/09/18/Qg0Grn.png[/img]</a><br>如果变成了安装zip包，你就可以选择img格式的GSI刷入啦</p>
 <p>下面进入正题</p>
@@ -204,91 +208,30 @@
 </blockquote>
 <p><strong>如何使用呢？</strong><br>在ErfanGSIs-master文件夹内打开终端<br>这里给一个公式<br>在终端内输入./url2GSI.sh {文件目录或直链} {系统类型}<br>比如我要跑一个MIUI的gsi,包的名字叫MIUI.zip<br>就输入./url2GSI.sh MIUI.zip MIUI<br>然后回车</p>
 
-      
     </div>
 
     
     
     
+
       <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2020/09/18/hello-world/">
+        
 
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="John Doe">
-      <meta itemprop="description" content="">
-    </span>
 
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/09/18/hello-world/" class="post-title-link" itemprop="url">Hello World</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              <time title="Created: 2020-09-18 19:13:37" itemprop="dateCreated datePublished" datetime="2020-09-18T19:13:37+08:00">2020-09-18</time>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-
-      
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2020/09/18/hello-world/" rel="prev" title="Hello World">
+      <i class="fa fa-chevron-left"></i> Hello World
+    </a></div>
+      <div class="post-nav-item"></div>
     </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
       </footer>
+    
   </article>
   
   
-  
-
-
   
 
 
@@ -341,6 +284,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#9-Pie%EF%BC%9A"><span class="nav-number">1.</span> <span class="nav-text">9 Pie：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#10-Q%EF%BC%9A"><span class="nav-number">2.</span> <span class="nav-text">10 Q：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#11-R%EF%BC%9A"><span class="nav-number">3.</span> <span class="nav-text">11 R：</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
